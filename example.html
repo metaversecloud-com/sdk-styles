@@ -2,8 +2,8 @@
 <html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="https://sdk-style.s3.amazonaws.com/styles-2.0.0.css" />
-    <!-- <link rel="stylesheet" href="./styles.css" /> -->
+    <link rel="stylesheet" href="https://sdk-style.s3.amazonaws.com/styles-3.0.0.css" />
+    <!-- <link rel="stylesheet" href="./styles-3.0.0.css" /> -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
     <script
@@ -23,7 +23,7 @@
       }
       .header {
         border-bottom: 1px solid #aaa;
-        margin: 32px 0 12px;
+        margin: 32px 0 12px !important;
       }
       .column {
         width: 30%;
@@ -53,18 +53,19 @@
   </head>
 
   <body class="rtsdk">
+    <!-- **** BEGIN Column **** -->
     <div class="column">
       <!-- Typography -->
-      <h2 class="header">Typography</h2>
+      <h2 class="header h2">Typography</h2>
 
-      <h1>This is heading 1</h1>
-      <h2>This is heading 2</h2>
-      <h3>This is heading 3</h3>
-      <h4>This is heading 4</h4>
-      <h5>This is heading 5</h5>
-      <h6>This is heading 6</h6>
+      <h1 class="h1">This is heading 1</h1>
+      <h2 class="h2">This is heading 2</h2>
+      <h3 class="h3">This is heading 3</h3>
+      <h4 class="h4">This is heading 4</h4>
+      <h5 class="h5">This is heading 5</h5>
+      <h6 class="h6">This is heading 6</h6>
 
-      <p>This is a paragraph (.p1)</p>
+      <p class="p1">This is a paragraph (.p1)</p>
 
       <p class="p2">This is a paragraph with the .p2 class applied</p>
 
@@ -82,26 +83,26 @@
       </p>
 
       <!-- Tabs -->
-      <h2 class="header">Tabs</h2>
+      <h2 class="header h2">Tabs</h2>
       <div style="display: block; margin: 0 0 20px">
         <div class="tab-container">
-          <button>Selected</button>
-          <button disabled>Disabled</button>
+          <button class="btn">Selected</button>
+          <button class="btn" disabled>Disabled</button>
         </div>
       </div>
       <div class="tab-container">
-        <button class="btn-text">Unselected</button>
-        <button>Selected</button>
+        <button class="btn btn-text">Unselected</button>
+        <button class="btn">Selected</button>
       </div>
       <pre>
 <code>&lt;div class="tab-container"&gt;
   &lt;button&gt;Selected&lt;/button&gt;
-  &lt;button class="btn-text"&gt;Unselected&lt;/button&gt;
+  &lt;button class="btn btn-text"&gt;Unselected&lt;/button&gt;
 &lt;/div&gt;</code>
 </pre>
 
       <!-- Chips -->
-      <h2 class="header">Chips</h2>
+      <h2 class="header h2">Chips</h2>
       <div class="chip">Chip</div>
       <div class="chip chip-success">Success</div>
       <div class="chip chip-danger">Danger</div>
@@ -112,8 +113,8 @@
 </pre>
 
       <!-- Table -->
-      <h2 class="header">Tables</h2>
-      <table>
+      <h2 class="header h2">Tables</h2>
+      <table class="table">
         <tr>
           <th>Column 1</th>
           <th>Column 2</th>
@@ -142,7 +143,7 @@
         </tr>
       </table>
       <pre>
-<code>&lt;table&gt;
+<code>&lt;table class="table"&gt;
   &lt;tr&gt;
     &lt;th&gt;Column 1&lt;/th&gt;
     &lt;th&gt;Column 2&lt;/th&gt;
@@ -157,7 +158,7 @@
 </pre>
 
       <!-- Tooltips -->
-      <h2 class="header">Tooltips</h2>
+      <h2 class="header h2">Tooltips</h2>
       <div class="tooltip">
         <span class="tooltip-content">I'm a tooltip!</span>
         I have a tooltip, hover over me!
@@ -170,90 +171,98 @@
 </pre>
 
       <!-- Timer -->
-      <h2 class="header">Timer</h2>
+      <h2 class="header h2">Timer</h2>
       <div class="timer">&#x231B; 12:34</div>
       <pre><code>&lt;div class="timer"&gt;&#x231B;  12:34&lt;/div&gt;</code></pre>
+
+      <!-- **** END Column **** -->
     </div>
 
+    <!-- **** BEGIN Column **** -->
     <div class="column">
       <!-- Buttons -->
-      <h2 class="header">Buttons</h2>
+      <h2 class="header h2">Buttons</h2>
 
       <div style="display: block; margin: 0 0 20px">
-        <button>Primary</button>
-        <button disabled>Disabled</button>
-        <pre><code>&lt;button&gt;Primary&lt;/button&gt;</code></pre>
+        <button class="btn">Primary</button>
+        <button class="btn" disabled>Disabled</button>
+        <pre><code>&lt;button class="btn"&gt;Primary&lt;/button&gt;</code></pre>
       </div>
 
       <div style="display: block; margin: 0 0 20px">
-        <button class="btn-outline">Outline</button>
-        <button class="btn-outline" disabled>Outline Disabled</button>
-        <pre><code>&lt;button class="btn-outline"&gt;Outline&lt;/button&gt;</code></pre>
+        <button class="btn btn-outline">Outline</button>
+        <button class="btn btn-outline" disabled>Outline Disabled</button>
+        <pre><code>&lt;button class="btn btn-outline"&gt;Outline&lt;/button&gt;</code></pre>
       </div>
 
       <div style="display: block; margin: 0 0 20px">
-        <button class="btn-text">Text</button>
-        <button class="btn-text" disabled>Text Disabled</button>
-        <pre><code>&lt;button class="btn-text"&gt;Text&lt;/button&gt;</code></pre>
+        <button class="btn btn-text">Text</button>
+        <button class="btn btn-text" disabled>Text Disabled</button>
+        <pre><code>&lt;button class="btn btn-text"&gt;Text&lt;/button&gt;</code></pre>
       </div>
 
       <div style="display: block; margin: 0 0 20px">
-        <button class="btn-success">Success</button>
-        <pre><code>&lt;button class="btn-success"&gt;Text&lt;/button&gt;</code></pre>
+        <button class="btn btn-success">Success</button>
+        <pre><code>&lt;button class="btn btn-success"&gt;Text&lt;/button&gt;</code></pre>
       </div>
 
       <div style="display: block; margin: 0 0 20px">
-        <button class="btn-success-outline">Success Outlined</button>
-        <pre><code>&lt;button class="btn-success-outline"&gt;Text&lt;/button&gt;</code></pre>
+        <button class="btn btn-success-outline">Success Outlined</button>
+        <pre><code>&lt;button class="btn btn-success-outline"&gt;Text&lt;/button&gt;</code></pre>
       </div>
 
-      <button class="btn-danger">Danger</button>
-      <pre><code>&lt;button class="btn-danger"&gt;Text&lt;/button&gt;</code></pre>
+      <button class="btn btn-danger">Danger</button>
+      <pre><code>&lt;button class="btn btn-danger"&gt;Text&lt;/button&gt;</code></pre>
 
-      <button class="btn-danger-outline">Danger Outlined</button>
-      <pre><code>&lt;button class="btn-danger-outline"&gt;Text&lt;/button&gt;</code></pre>
+      <button class="btn btn-danger-outline">Danger Outlined</button>
+      <pre><code>&lt;button class="btn btn-danger-outline"&gt;Text&lt;/button&gt;</code></pre>
 
       <!-- Icon Buttons -->
-      <h2 class="header">Icon Buttons</h2>
-      <button class="btn-icon">&#9733;</button>
-      <button class="btn-icon" disabled>&#9733;</button>
-      <pre><code>&lt;button class="btn-icon"&gt;&#9733;&lt;/button&gt;</code></pre>
+      <h2 class="header h2">Icon Buttons</h2>
+      <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/edit.svg" /></button>
+      <button class="btn btn-icon" disabled><img src="https://sdk-style.s3.amazonaws.com/icons/cog.svg" /></button>
+      <pre><code>&lt;button class="btn btn-icon"&gt;<img src="https://sdk-style.s3.amazonaws.com/icons/info.svg" />&lt;/button&gt;</code></pre>
 
       <!-- Inputs -->
-      <h2 class="header">Inputs</h2>
+      <h2 class="header h2">Inputs</h2>
       <div style="display: block; margin: 0 0 20px">
-        <label>Enabled</label>
-        <input type="text" placeholder="placeholder" />
+        <label class="label">Enabled</label>
+        <input class="input" type="text" placeholder="placeholder" />
         <pre>
 <code>&lt;label&gt;Enabled&lt;/label&gt;
-&lt;input type="text" /&gt;</code>
+&lt;input class="input" type="text" /&gt;</code>
 </pre>
       </div>
 
       <div style="display: block; margin: 0 0 20px">
-        <label>With Value</label>
-        <input type="text" value="value" />
+        <label class="label">Textarea</label>
+        <textarea class="input" rows="5" maxlength="120"></textarea>
       </div>
 
       <div style="display: block; margin: 0 0 20px">
-        <label>Disabled</label>
-        <input disabled type="text" />
+        <label class="label">With Value</label>
+        <input class="input" type="text" value="value" />
       </div>
 
       <div style="display: block; margin: 0 0 20px">
-        <label>Error</label>
-        <input class="input-error" type="text" value="error" />
+        <label class="label">Disabled</label>
+        <input class="input" disabled type="text" />
+      </div>
+
+      <div style="display: block; margin: 0 0 20px">
+        <label class="label">Error</label>
+        <input class="input input-error" type="text" value="error" />
         <p class="p3 text-error">An error has occurred</p>
         <pre>
 <code>&lt;label&gt;Error&lt;/label&gt;
-&lt;input class="input-error" type="text" /&gt;
+&lt;input class="input input-error" type="text" /&gt;
 &lt;p class="p3 text-error"&gt;An error has occurred&lt;/label&gt;</code>
 </pre>
       </div>
 
-      <h2 class="header">Dropdown</h2>
+      <h2 class="header h2">Dropdown</h2>
       <div style="display: block; margin: 0 0 10px">
-        <select>
+        <select class="input">
           <option value="1">Option 1</option>
           <option value="2">Option 2</option>
           <option value="3">Option 3</option>
@@ -263,70 +272,72 @@
         </select>
       </div>
       <div style="display: block; margin: 0 0 20px">
-        <label>Error</label>
-        <select class="input-error">
+        <label class="label">Error</label>
+        <select class="input input-error">
           <option value="1">Option 1</option>
         </select>
         <p class="p3 text-error">An error has occurred</p>
       </div>
       <pre>
-<code>&lt;select&gt;
+<code>&lt;select class="input"&gt;
   &lt;option value="1"&gt;Option 1&lt;/option>&gt;
   &lt;option value="2"&gt;Option 2&lt;/option>&gt;
   &lt;option value="3"&gt;Option 3&lt;/option>&gt;
 &lt;/select&gt;</code>
 </pre>
 
-      <h2 class="header">Radio Buttons</h2>
+      <h2 class="header h2">Radio Buttons</h2>
       <div style="display: block; margin: 0 0 10px">
-        <label>
-          <input type="radio" name="radio" />
+        <label class="label">
+          <input class="input-radio" type="radio" name="radio" />
           Radio Button
         </label>
         <pre>
 <code>&lt;label&gt;
-  &lt;input type="radio" name="radio" /&gt;
+  &lt;input class="input-radio" type="radio" name="radio" /&gt;
   Radio Button
 &lt;/label&gt;</code>
 </pre>
       </div>
       <div style="display: block; margin: 0 0 10px">
-        <label>
-          <input type="radio" class="input-error" name="radio" />
+        <label class="label">
+          <input type="radio" class="input-radio input-error" name="radio" />
           Error
         </label>
         <pre>
 <code>&lt;label&gt;
-  &lt;input type="radio" name="radio" class="input-error" /&gt;
+  &lt;input type="radio" name="radio" class="input-radio input-error" /&gt;
   Radio Button
 &lt;/label&gt;</code>
 </pre>
       </div>
-      <label>
-        <input type="radio" disabled />
+      <label class="label">
+        <input class="input-radio" type="radio" disabled />
         Disabled
       </label>
       <pre>
 <code>&lt;label&gt;
-  &lt;input type="radio" name="radio" disabled /&gt;
+  &lt;input class="input-radio" type="radio" name="radio" disabled /&gt;
   Radio Button
 &lt;/label&gt;</code>
 </pre>
+      <!-- **** END Column **** -->
     </div>
 
+    <!-- **** BEGIN Column **** -->
     <div class="column">
       <!-- Cards -->
-      <h2 class="header">Cards</h2>
+      <h2 class="header h2">Cards</h2>
 
       <div class="card small">
         <div class="card-image"></div>
         <div class="card-details">
-          <h4>Card title (h4)</h4>
-          <p2>Card description (p2).</p2>
+          <h4 class="card-title h4">Card title (h4)</h4>
+          <p class="card-description p2">Card description (p2).</p>
           <div class="card-actions">
-            <button class="btn-icon">&#9733;</button>
-            <button class="btn-icon">&#9733;</button>
-            <button class="btn-icon">&#9733;</button>
+            <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/edit.svg" /></button>
+            <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/cog.svg" /></button>
+            <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/info.svg" /></button>
           </div>
         </div>
       </div>
@@ -336,12 +347,12 @@
       <div class="card">
         <div class="card-image"></div>
         <div class="card-details">
-          <h4>Card title (h4)</h4>
-          <p2>Card description (p2).</p2>
+          <h4 class="card-title h4">Card title (h4)</h4>
+          <p class="card-description p2">Card description (p2).</p>
           <div class="card-actions">
-            <button class="btn-icon">&#9733;</button>
-            <button class="btn-icon">&#9733;</button>
-            <button class="btn-icon">&#9733;</button>
+            <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/edit.svg" /></button>
+            <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/cog.svg" /></button>
+            <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/info.svg" /></button>
           </div>
         </div>
       </div>
@@ -350,9 +361,9 @@
 
       <div class="card horizontal">
         <div class="card-details">
-          <h4>Card title (h4)</h4>
+          <h4 class="card-title h4">Card title (h4)</h4>
           <div class="card-actions">
-            <button class="btn-icon">&#9733;</button>
+            <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/edit.svg" /></button>
           </div>
         </div>
       </div>
@@ -361,31 +372,73 @@
 <code>&lt;div class="card"&gt;
   &lt;div class="card-image"&gt;&lt;/div&gt;
   &lt;div class="card-details"&gt;
-    &lt;h4&gt;Card title (h4)&lt;/h4&gt;
-    &lt;p2&gt;Card description (p2).&lt;/p2&gt;
+    &lt;h4 class="card-title"&gt;Card title (h4)&lt;/h4&gt;
+    &lt;p class="card-description p2"&gt;Card description (p2).&lt;/p&gt;
     &lt;div class="card-actions"&gt;
-      &lt;button class="btn-icon"&gt;&#9733;&lt;/button&gt;
-      &lt;button class="btn-icon"&gt;&#9733;&lt;/button&gt;
-      &lt;button class="btn-icon"&gt;&#9733;&lt;/button&gt;
+      &lt;button class="btn btn-icon"&gt;
+        &lt;img src="https://sdk-style.s3.amazonaws.com/icons/edit.svg" /&gt;
+      &lt;/button&gt;
+      &lt;button class="btn btn-icon"&gt;
+        &lt;img src="https://sdk-style.s3.amazonaws.com/icons/cog.svg" /&gt;
+      &lt;/button&gt;
+      &lt;button class="btn btn-icon"&gt;
+        &lt;img src="https://sdk-style.s3.amazonaws.com/icons/info.svg" /&gt;
+      &lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code>
 </pre>
 
-      <!-- Modals -->
-      <h2 class="header">Modals</h2>
+      <!-- Accordions -->
+      <h2 class="header h2">Accordions</h2>
+      <section id="accordion" class="accordion">
+        <div class="accordion-container">
+          <details class="accordion-item">
+            <summary class="accordion-trigger">
+              <span class="accordion-title h4">Title</span>
+              <img
+                class="accordion-icon"
+                aria-hidden="true"
+                src="https://sdk-style.s3.amazonaws.com/icons/chevronDown.svg"
+              />
+            </summary>
+            <div class="accordion-content">
+              <p>This toggles collapsible content based on user interaction.</p>
+            </div>
+          </details>
+        </div>
+      </section>
 
-      <button id="open">Open Modal</button>
+      <pre>
+<code>&lt;section id="accordion" class="accordion"&gt;
+  &lt;div class="accordion-container"&gt;;
+    &lt;details class="accordion-item"&gt;
+    &lt;summary class="accordion-trigger"&gt;
+        &lt;span class="accordion-title"&gt;Title&lt;/span&gt;
+        &lt;img class="accordion-icon" aria-hidden="true" src="https://sdk-style.s3.amazonaws.com/icons/chevronDown.svg" /&gt; 
+    &lt;/summary&gt;
+    &lt;div class="accordion-content"&gt;
+        &lt;p&gt;This toggles collapsible content based on user interaction.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/details&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code>
+</pre>
+
+      <!-- Modals -->
+      <h2 class="header h2">Modals</h2>
+
+      <button id="open" class="btn">Open Modal</button>
       <div id="modalExample" class="modal-container">
         <div class="modal">
-          <h4>Modal title (h4)</h4>
+          <h4 class="h4">Modal title (h4)</h4>
           <p2
             >Modal description (p2). Bacon ipsum dolor amet pork chuck frankfurter alcatra. Turducken short loin cow
             meatloaf.</p2
           >
           <div class="actions">
-            <button class="btn-outline">Outline</button>
-            <button id="close">Close</button>
+            <button class="btn btn-outline">Outline</button>
+            <button class="btn" id="close">Close</button>
           </div>
         </div>
       </div>
@@ -395,8 +448,8 @@
     &lt;h4&gt;Modal title (h4)&lt;/h4&gt;
     &lt;p2&gt;Modal description (p2).&lt;/p2&gt;
     &lt;div class="actions"&gt;
-      &lt;button class="btn-outline"&gt;Button&lt;/button&gt;
-      &lt;button&gt;Button&lt;/button&gt;
+      &lt;button class="btn btn-outline"&gt;Button&lt;/button&gt;
+      &lt;button class="btn"&gt;Button&lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code>

@@ -1,10 +1,10 @@
 {
   "name": "rtsdk-styles",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch styles.scss styles.css"
+    "sass": "sass --watch styles.scss styles-3.0.0.css"
   },
   "author": "",
   "license": "ISC"

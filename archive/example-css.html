@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./sdk.css" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 20px 0;
+      }
+      .header {
+        border-bottom: 1px solid #aaa;
+        margin: 32px 0 12px;
+      }
+      .column {
+        width: 30%;
+        float: left;
+        margin: 0 10px;
+      }
+      pre {
+        margin: 6px 0;
+        padding: 2px 6px;
+        background: #f5f5f5;
+        border-radius: 4px;
+        border: 1px solid #eee;
+        font-size: 12px;
+      }
+    </style>
+
+    <script>
+      $(document).ready(function () {
+        document.getElementById("open").addEventListener("click", () => {
+          document.getElementById("modalExample").classList.add("visible");
+        });
+        document.getElementById("close").addEventListener("click", () => {
+          document.getElementById("modalExample").classList.remove("visible");
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="column">
+      <!-- Typography -->
+      <h2 class="header">Typography</h2>
+
+      <h1>This is heading 1</h1>
+      <h2>This is heading 2</h2>
+      <h3>This is heading 3</h3>
+      <h4>This is heading 4</h4>
+      <h5>This is heading 5</h5>
+      <h6>This is heading 6</h6>
+
+      <p>This is a paragraph (.p1)</p>
+
+      <p class="p2">This is a paragraph with the .p2 class applied</p>
+
+      <p class="p3">This is a paragraph with the .p3 class applied</p>
+
+      <p class="p4">This is a paragraph with the .p4 class applied</p>
+
+      <hr />
+
+      <p class="p4">
+        <em>
+          Any of the headings can also be styled using html tags or classes. For example: &lt;h1&gt; and &lt;p
+          class=".h1"&gt; will render the same.
+        </em>
+      </p>
+
+      <!-- Tabs -->
+      <h2 class="header">Tabs</h2>
+      <div style="display: block; margin: 0 0 20px">
+        <div class="tab-container">
+          <button>Selected</button>
+          <button disabled>Disabled</button>
+        </div>
+      </div>
+      <div class="tab-container">
+        <button class="btn-text">Unselected</button>
+        <button>Selected</button>
+      </div>
+      <pre>
+<code>&lt;div class="tab-container"&gt;
+  &lt;button&gt;Selected&lt;/button&gt;
+  &lt;button class="btn-text"&gt;Unselected&lt;/button&gt;
+&lt;/div&gt;</code>
+</pre>
+
+      <!-- Chips -->
+      <h2 class="header">Chips</h2>
+      <div class="chip">Chip</div>
+      <div class="chip chip-success">Success</div>
+      <div class="chip chip-danger">Danger</div>
+      <pre>
+<code>&lt;div class="chip"&gt;Chip&lt;/div&gt;
+&lt;div class="chip chip-success"&gt;Success&lt;/div&gt;
+&lt;div class="chip chip-danger"&gt;Danger&lt;/div&gt;</code>
+</pre>
+
+      <!-- Table -->
+      <h2 class="header">Tables</h2>
+      <table>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+        <tr>
+          <td>Hello</td>
+          <td>World</td>
+          <td>
+            <div class="chip">Chip</div>
+          </td>
+        </tr>
+        <tr>
+          <td>Hello</td>
+          <td>World</td>
+          <td>
+            <div class="chip chip-success">Success</div>
+          </td>
+        </tr>
+        <tr>
+          <td>Hello</td>
+          <td>World</td>
+          <td>
+            <div class="chip chip-danger">Danger</div>
+          </td>
+        </tr>
+      </table>
+      <pre>
+<code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Column 1&lt;/th&gt;
+    &lt;th&gt;Column 2&lt;/th&gt;
+    &lt;th&gt;Column 3&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Hello&lt;/td&gt;
+    &lt;td&gt;World&lt;/td&gt;
+    &lt;td&gt;&lt;div class="chip chip-success"&gt;Success&lt;/div&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code>
+</pre>
+
+      <!-- Tooltips -->
+      <h2 class="header">Tooltips</h2>
+      <div class="tooltip">
+        <span class="tooltip-content">I'm a tooltip!</span>
+        I have a tooltip, hover over me!
+      </div>
+      <pre>
+<code>&lt;div class="tooltip"&gt;
+  &lt;span class="tooltip-content"&gt;I'm a tooltip!&lt;/span&gt;
+  I have a tooltip, hover over me!
+&lt;/div&gt;</code>
+</pre>
+
+      <!-- Timer -->
+      <h2 class="header">Timer</h2>
+      <div class="timer">&#x231B; 12:34</div>
+      <pre><code>&lt;div class="timer"&gt;&#x231B;  12:34&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="column">
+      <!-- Buttons -->
+      <h2 class="header">Buttons</h2>
+
+      <div style="display: block; margin: 0 0 20px">
+        <button>Primary</button>
+        <button disabled>Disabled</button>
+        <pre><code>&lt;button&gt;Primary&lt;/button&gt;</code></pre>
+      </div>
+
+      <div style="display: block; margin: 0 0 20px">
+        <button class="btn-outline">Outline</button>
+        <button class="btn-outline" disabled>Outline Disabled</button>
+        <pre><code>&lt;button class="btn-outline"&gt;Outline&lt;/button&gt;</code></pre>
+      </div>
+
+      <div style="display: block; margin: 0 0 20px">
+        <button class="btn-text">Text</button>
+        <button class="btn-text" disabled>Text Disabled</button>
+        <pre><code>&lt;button class="btn-text"&gt;Text&lt;/button&gt;</code></pre>
+      </div>
+
+      <div style="display: block; margin: 0 0 20px">
+        <button class="btn-success">Success</button>
+        <pre><code>&lt;button class="btn-success"&gt;Text&lt;/button&gt;</code></pre>
+      </div>
+
+      <div style="display: block; margin: 0 0 20px">
+        <button class="btn-success-outline">Success Outlined</button>
+        <pre><code>&lt;button class="btn-success-outline"&gt;Text&lt;/button&gt;</code></pre>
+      </div>
+
+      <button class="btn-danger">Danger</button>
+      <pre><code>&lt;button class="btn-danger"&gt;Text&lt;/button&gt;</code></pre>
+
+      <button class="btn-danger-outline">Danger Outlined</button>
+      <pre><code>&lt;button class="btn-danger-outline"&gt;Text&lt;/button&gt;</code></pre>
+
+      <!-- Icon Buttons -->
+      <h2 class="header">Icon Buttons</h2>
+      <button class="btn-icon">&#9733;</button>
+      <button class="btn-icon" disabled>&#9733;</button>
+      <pre><code>&lt;button class="btn-icon"&gt;&#9733;&lt;/button&gt;</code></pre>
+
+      <!-- Inputs -->
+      <h2 class="header">Inputs</h2>
+      <div style="display: block; margin: 0 0 20px">
+        <label>Enabled</label>
+        <input type="text" placeholder="placeholder" />
+        <pre>
+<code>&lt;label&gt;Enabled&lt;/label&gt;
+&lt;input type="text" /&gt;</code>
+</pre>
+      </div>
+
+      <div style="display: block; margin: 0 0 20px">
+        <label>With Value</label>
+        <input type="text" value="value" />
+      </div>
+
+      <div style="display: block; margin: 0 0 20px">
+        <label>Disabled</label>
+        <input disabled type="text" />
+      </div>
+
+      <div style="display: block; margin: 0 0 20px">
+        <label>Error</label>
+        <input class="input-error" type="text" value="error" />
+        <p class="p3 text-error">An error has occurred</p>
+        <pre>
+<code>&lt;label&gt;Error&lt;/label&gt;
+&lt;input class="input-error" type="text" /&gt;
+&lt;p class="p3 text-error"&gt;An error has occurred&lt;/label&gt;</code>
+</pre>
+      </div>
+
+      <h2 class="header">Dropdown</h2>
+      <div style="display: block; margin: 0 0 10px">
+        <select>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+          <option value="4">Option 4</option>
+          <option value="5">Option 5</option>
+          <option value="6">Option 6</option>
+        </select>
+      </div>
+      <div style="display: block; margin: 0 0 20px">
+        <label>Error</label>
+        <select class="input-error">
+          <option value="1">Option 1</option>
+        </select>
+        <p class="p3 text-error">An error has occurred</p>
+      </div>
+      <pre>
+<code>&lt;select&gt;
+  &lt;option value="1"&gt;Option 1&lt;/option>&gt;
+  &lt;option value="2"&gt;Option 2&lt;/option>&gt;
+  &lt;option value="3"&gt;Option 3&lt;/option>&gt;
+&lt;/select&gt;</code>
+</pre>
+
+      <h2 class="header">Radio Buttons</h2>
+      <div style="display: block; margin: 0 0 10px">
+        <label>
+          <input type="radio" name="radio" />
+          Radio Button
+        </label>
+        <pre>
+<code>&lt;label&gt;
+  &lt;input type="radio" name="radio" /&gt;
+  Radio Button
+&lt;/label&gt;</code>
+</pre>
+      </div>
+      <div style="display: block; margin: 0 0 10px">
+        <label>
+          <input type="radio" class="input-error" name="radio" />
+          Error
+        </label>
+        <pre>
+<code>&lt;label&gt;
+  &lt;input type="radio" name="radio" class="input-error" /&gt;
+  Radio Button
+&lt;/label&gt;</code>
+</pre>
+      </div>
+      <label>
+        <input type="radio" disabled />
+        Disabled
+      </label>
+      <pre>
+<code>&lt;label&gt;
+  &lt;input type="radio" name="radio" disabled /&gt;
+  Radio Button
+&lt;/label&gt;</code>
+</pre>
+    </div>
+
+    <div class="column">
+      <!-- Cards -->
+      <h2 class="header">Cards</h2>
+
+      <div class="card small">
+        <div class="card-image"></div>
+        <div class="card-details">
+          <h4>Card title (h4)</h4>
+          <p2>Card description (p2).</p2>
+          <div class="card-actions">
+            <button class="btn-icon">&#9733;</button>
+            <button class="btn-icon">&#9733;</button>
+            <button class="btn-icon">&#9733;</button>
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="card">
+        <div class="card-image"></div>
+        <div class="card-details">
+          <h4>Card title (h4)</h4>
+          <p2>Card description (p2).</p2>
+          <div class="card-actions">
+            <button class="btn-icon">&#9733;</button>
+            <button class="btn-icon">&#9733;</button>
+            <button class="btn-icon">&#9733;</button>
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="card horizontal">
+        <div class="card-details">
+          <h4>Card title (h4)</h4>
+          <div class="card-actions">
+            <button class="btn-icon">&#9733;</button>
+          </div>
+        </div>
+      </div>
+
+      <pre>
+<code>&lt;div class="card"&gt;
+  &lt;div class="card-image"&gt;&lt;/div&gt;
+  &lt;div class="card-details"&gt;
+    &lt;h4&gt;Card title (h4)&lt;/h4&gt;
+    &lt;p2&gt;Card description (p2).&lt;/p2&gt;
+    &lt;div class="card-actions"&gt;
+      &lt;button class="btn-icon"&gt;&#9733;&lt;/button&gt;
+      &lt;button class="btn-icon"&gt;&#9733;&lt;/button&gt;
+      &lt;button class="btn-icon"&gt;&#9733;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+</pre>
+
+      <!-- Modals -->
+      <h2 class="header">Modals</h2>
+
+      <button id="open">Open Modal</button>
+      <div id="modalExample" class="modal-container">
+        <div class="modal">
+          <h4>Modal title (h4)</h4>
+          <p2
+            >Modal description (p2). Bacon ipsum dolor amet pork chuck frankfurter alcatra. Turducken short loin cow
+            meatloaf.</p2
+          >
+          <div class="actions">
+            <button class="btn-outline">Outline</button>
+            <button id="close">Close</button>
+          </div>
+        </div>
+      </div>
+      <pre>
+<code>&lt;div class="modal-container"&gt;
+  &lt;div class="modal"&gt;
+    &lt;h4&gt;Modal title (h4)&lt;/h4&gt;
+    &lt;p2&gt;Modal description (p2).&lt;/p2&gt;
+    &lt;div class="actions"&gt;
+      &lt;button class="btn-outline"&gt;Button&lt;/button&gt;
+      &lt;button&gt;Button&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code>
+</pre>
+    </div>
+  </body>
+</html>

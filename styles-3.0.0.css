@@ -1,11 +1,17 @@
-html {
-  box-sizing: border-box;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Quicksand;
+  font-style: normal;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+body,
+p {
+  font-family: "Open Sans";
+  font-style: normal;
 }
 
 .rtsdk {
@@ -33,16 +39,8 @@ html {
   /*** Chips ***/
   /*** Tables ***/
   /*** Tooltips ***/
+  /*** Accordions ***/
 }
-.rtsdk h1,
-.rtsdk h2,
-.rtsdk h3,
-.rtsdk h4,
-.rtsdk h5,
-.rtsdk h6 {
-  margin: 0;
-}
-.rtsdk h1,
 .rtsdk .h1 {
   color: #0a2540;
   font-family: Quicksand;
@@ -51,8 +49,8 @@ html {
   font-weight: 300;
   line-height: 130%; /* 62.4px */
   letter-spacing: -0.24px;
+  margin: 0;
 }
-.rtsdk h2,
 .rtsdk .h2 {
   color: #0a2540;
   font-family: Quicksand;
@@ -60,8 +58,8 @@ html {
   font-style: normal;
   font-weight: 500;
   line-height: 130%; /* 39px */
+  margin: 0;
 }
-.rtsdk h3,
 .rtsdk .h3 {
   color: #0a2540;
   font-family: Quicksand;
@@ -70,8 +68,8 @@ html {
   font-weight: 600;
   line-height: 130%; /* 31.2px */
   letter-spacing: 0.06px;
+  margin: 0;
 }
-.rtsdk h4,
 .rtsdk .h4 {
   color: #0a2540;
   font-family: Quicksand;
@@ -79,8 +77,8 @@ html {
   font-style: normal;
   font-weight: 600;
   line-height: 130%; /* 23.4px */
+  margin: 0;
 }
-.rtsdk h5,
 .rtsdk .h5 {
   color: #0a2540;
   font-family: Quicksand;
@@ -89,8 +87,8 @@ html {
   font-weight: 600;
   line-height: 130%; /* 20.8px */
   letter-spacing: 0.024px;
+  margin: 0;
 }
-.rtsdk h6,
 .rtsdk .h6 {
   color: #0a2540;
   font-family: Quicksand;
@@ -99,8 +97,9 @@ html {
   font-weight: 600;
   line-height: 130%; /* 19.5px */
   letter-spacing: 0.023px;
+  margin: 0;
 }
-.rtsdk p,
+.rtsdk .p,
 .rtsdk .p1 {
   color: #3b5166;
   font-family: "Open Sans";
@@ -109,8 +108,9 @@ html {
   font-weight: 400;
   line-height: 140%; /* 22.4px */
   letter-spacing: 0.08px;
+  margin: 0;
 }
-.rtsdk body,
+.rtsdk .body,
 .rtsdk .p2 {
   color: #3b5166;
   font-family: "Open Sans";
@@ -119,6 +119,7 @@ html {
   font-weight: 400;
   line-height: 140%; /* 19.6px */
   letter-spacing: 0.035px;
+  margin: 0;
 }
 .rtsdk .p3 {
   color: #3b5166;
@@ -128,6 +129,7 @@ html {
   font-weight: 400;
   line-height: 140%; /* 16.8px */
   letter-spacing: 0.03px;
+  margin: 0;
 }
 .rtsdk .p4 {
   color: #3b5166;
@@ -137,6 +139,7 @@ html {
   font-weight: 400;
   line-height: 140%; /* 14px */
   letter-spacing: 0.025px;
+  margin: 0;
 }
 .rtsdk .text-error {
   color: #cc4040;
@@ -147,7 +150,6 @@ html {
   line-height: normal;
   margin: 0;
 }
-.rtsdk button,
 .rtsdk .btn {
   display: inline-flex;
   height: 40px;
@@ -164,12 +166,10 @@ html {
   border-color: #0a2540;
   cursor: pointer;
 }
-.rtsdk button:hover,
 .rtsdk .btn:hover {
   background: #3b5166;
   border-color: #3b5166;
 }
-.rtsdk button:disabled,
 .rtsdk .btn:disabled,
 .rtsdk .btn-success:disabled,
 .rtsdk .btn-danger:disabled {
@@ -177,7 +177,6 @@ html {
   border-color: #d6dbdf;
   cursor: not-allowed;
 }
-.rtsdk button a,
 .rtsdk .btn a {
   text-decoration: none;
 }
@@ -266,14 +265,13 @@ html {
   background: #dee2e5;
   border-color: #ebedef;
 }
-.rtsdk label {
+.rtsdk .label {
   color: #3b5166;
   display: flex;
   align-items: center;
   gap: 4px;
 }
-.rtsdk input,
-.rtsdk select {
+.rtsdk .input {
   display: flex;
   padding: 8px 12px;
   align-items: center;
@@ -281,19 +279,17 @@ html {
   border-radius: 8px;
   border: 2px solid #ebedef;
   background: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
 }
-.rtsdk input:focus {
+.rtsdk .input:focus {
   border-color: #6c7c8c;
 }
 .rtsdk .input-error {
   color: #0a2540;
   border-color: #cc4040;
 }
-.rtsdk input[type=text],
-.rtsdk select {
-  width: 100%;
-}
-.rtsdk input[type=radio] {
+.rtsdk .input-radio {
   appearance: none;
   -webkit-appearance: none;
   border-radius: 50%;
@@ -303,23 +299,23 @@ html {
   padding: 8px;
   cursor: pointer;
 }
-.rtsdk input[type=radio]:hover {
+.rtsdk .input-radio:hover {
   outline-color: #6c7c8c;
 }
-.rtsdk input[type=radio]:checked {
+.rtsdk .input-radio:checked {
   background: #0a2540;
   outline-color: #0a2540;
 }
-.rtsdk input[type=radio]:disabled {
+.rtsdk .input-radio:disabled {
   background: #ebedef;
   border-color: #ebedef;
   outline-color: #ebedef;
   cursor: not-allowed;
 }
-.rtsdk input[type=radio].input-error {
+.rtsdk .input-radio.input-error {
   outline-color: #cc4040;
 }
-.rtsdk input[type=radio].input-error:checked {
+.rtsdk .input-radio.input-error:checked {
   background: #cc4040;
 }
 .rtsdk .card {
@@ -331,6 +327,7 @@ html {
   display: flex;
   gap: 12px;
   flex-direction: column;
+  box-sizing: border-box;
 }
 .rtsdk .card.small {
   flex-direction: row;
@@ -359,13 +356,13 @@ html {
   justify-content: space-between;
   width: 100%;
 }
-.rtsdk .card h4 {
+.rtsdk .card-title {
   margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.rtsdk .card p2 {
+.rtsdk .card-description {
   height: 62px;
   font-size: 0.875rem;
   line-height: 1.4;
@@ -429,10 +426,6 @@ html {
   box-shadow: 0px 15px 12px 0px rgba(0, 0, 0, 0.11), 0px 19px 38px 0px rgba(0, 0, 0, 0.15);
   text-align: center;
 }
-.rtsdk .modal h4,
-.rtsdk .modal p {
-  margin: 0;
-}
 .rtsdk .modal .actions {
   display: flex;
   flex-direction: row;
@@ -465,15 +458,15 @@ html {
   color: #c62828;
   border-color: #c62828;
 }
-.rtsdk table {
+.rtsdk .table {
   width: 100%;
   padding: 16px;
   border-radius: 8px;
   border: 1px solid #ebedef;
   background: #fff;
 }
-.rtsdk table th,
-.rtsdk table td {
+.rtsdk .table th,
+.rtsdk .table td {
   padding: 8px;
   text-align: left;
 }
@@ -508,5 +501,43 @@ html {
 .rtsdk .tooltip:hover .tooltip-content {
   visibility: visible;
 }
+.rtsdk .accordion-container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 12px 16px;
+  border-radius: 16px;
+  border: 1px solid #ebedef;
+  background: #ffffff;
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.rtsdk .accordion-item {
+  width: 100%;
+}
+.rtsdk .accordion-trigger {
+  width: 100%;
+  display: block;
+  text-align: left;
+  border: none;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.rtsdk .accordion-trigger::marker {
+  display: none !important;
+}
+.rtsdk .accordion-title {
+  display: inline;
+}
+.rtsdk .accordion-icon {
+  transition: transform 0.5s;
+}
+.rtsdk .accordion-item[open] .accordion-icon {
+  transform: rotate(180deg);
+}
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles-3.0.0.css.map */

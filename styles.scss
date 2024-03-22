@@ -34,29 +34,25 @@ $spacing-6: 32px;
 $spacing-7: 40px;
 $spacing-8: 48px;
 
-// styles
-html {
-  box-sizing: border-box;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Quicksand;
+  font-style: normal;
 }
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+
+body,
+p {
+  font-family: "Open Sans";
+  font-style: normal;
 }
 
 .rtsdk {
   /*** Typography ***/
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0;
-  }
-
   /* Heading 1 */
-  h1,
   .h1 {
     color: $colors-primary-900;
     font-family: Quicksand;
@@ -65,10 +61,10 @@ html {
     font-weight: 300;
     line-height: 130%; /* 62.4px */
     letter-spacing: -0.24px;
+    margin: 0;
   }
 
   /* Heading 2 */
-  h2,
   .h2 {
     color: $colors-primary-900;
     font-family: Quicksand;
@@ -76,10 +72,10 @@ html {
     font-style: normal;
     font-weight: 500;
     line-height: 130%; /* 39px */
+    margin: 0;
   }
 
   /* Heading 3 */
-  h3,
   .h3 {
     color: $colors-primary-900;
     font-family: Quicksand;
@@ -88,10 +84,10 @@ html {
     font-weight: 600;
     line-height: 130%; /* 31.2px */
     letter-spacing: 0.06px;
+    margin: 0;
   }
 
   /* Heading 4 */
-  h4,
   .h4 {
     color: $colors-primary-900;
     font-family: Quicksand;
@@ -99,10 +95,10 @@ html {
     font-style: normal;
     font-weight: 600;
     line-height: 130%; /* 23.4px */
+    margin: 0;
   }
 
   /* Heading 5 */
-  h5,
   .h5 {
     color: $colors-primary-900;
     font-family: Quicksand;
@@ -111,10 +107,10 @@ html {
     font-weight: 600;
     line-height: 130%; /* 20.8px */
     letter-spacing: 0.024px;
+    margin: 0;
   }
 
   /* Heading 6 */
-  h6,
   .h6 {
     color: $colors-primary-900;
     font-family: Quicksand;
@@ -123,10 +119,11 @@ html {
     font-weight: 600;
     line-height: 130%; /* 19.5px */
     letter-spacing: 0.023px;
+    margin: 0;
   }
 
   /* Body 1 */
-  p,
+  .p,
   .p1 {
     color: $colors-primary-700;
     font-family: "Open Sans";
@@ -135,10 +132,11 @@ html {
     font-weight: 400;
     line-height: 140%; /* 22.4px */
     letter-spacing: 0.08px;
+    margin: 0;
   }
 
   /* Body 2 */
-  body,
+  .body,
   .p2 {
     color: $colors-primary-700;
     font-family: "Open Sans";
@@ -147,6 +145,7 @@ html {
     font-weight: 400;
     line-height: 140%; /* 19.6px */
     letter-spacing: 0.035px;
+    margin: 0;
   }
 
   /* Body 3 */
@@ -158,6 +157,7 @@ html {
     font-weight: 400;
     line-height: 140%; /* 16.8px */
     letter-spacing: 0.03px;
+    margin: 0;
   }
 
   /* Body 4 */
@@ -169,6 +169,7 @@ html {
     font-weight: 400;
     line-height: 140%; /* 14px */
     letter-spacing: 0.025px;
+    margin: 0;
   }
 
   .text-error {
@@ -182,7 +183,6 @@ html {
   }
 
   /*** Buttons ***/
-  button,
   .btn {
     display: inline-flex;
     height: 40px;
@@ -199,12 +199,10 @@ html {
     border-color: $colors-primary-900;
     cursor: pointer;
   }
-  button:hover,
   .btn:hover {
     background: $colors-primary-700;
     border-color: $colors-primary-700;
   }
-  button:disabled,
   .btn:disabled,
   .btn-success:disabled,
   .btn-danger:disabled {
@@ -212,7 +210,6 @@ html {
     border-color: $colors-primary-400;
     cursor: not-allowed;
   }
-  button a,
   .btn a {
     text-decoration: none;
   }
@@ -312,14 +309,13 @@ html {
   }
 
   /*** Inputs ***/
-  label {
+  .label {
     color: $colors-primary-700;
     display: flex;
     align-items: center;
     gap: $spacing-1;
   }
-  input,
-  select {
+  .input {
     display: flex;
     padding: $spacing-2 $spacing-3;
     align-items: center;
@@ -327,8 +323,10 @@ html {
     border-radius: 8px;
     border: 2px solid $colors-primary-100;
     background: $colors-primary-0;
+    width: 100%;
+    box-sizing: border-box;
   }
-  input:focus {
+  .input:focus {
     border-color: $colors-primary-500;
   }
   .input-error {
@@ -336,12 +334,7 @@ html {
     border-color: $colors-danger-500;
   }
 
-  input[type="text"],
-  select {
-    width: 100%;
-  }
-
-  input[type="radio"] {
+  .input-radio {
     appearance: none;
     -webkit-appearance: none;
     border-radius: 50%;
@@ -351,23 +344,23 @@ html {
     padding: $spacing-2;
     cursor: pointer;
   }
-  input[type="radio"]:hover {
+  .input-radio:hover {
     outline-color: $colors-primary-500;
   }
-  input[type="radio"]:checked {
+  .input-radio:checked {
     background: $colors-primary-900;
     outline-color: $colors-primary-900;
   }
-  input[type="radio"]:disabled {
+  .input-radio:disabled {
     background: $colors-primary-100;
     border-color: $colors-primary-100;
     outline-color: $colors-primary-100;
     cursor: not-allowed;
   }
-  input[type="radio"].input-error {
+  .input-radio.input-error {
     outline-color: $colors-danger-500;
   }
-  input[type="radio"].input-error:checked {
+  .input-radio.input-error:checked {
     background: $colors-danger-500;
   }
 
@@ -381,6 +374,7 @@ html {
     display: flex;
     gap: $spacing-3;
     flex-direction: column;
+    box-sizing: border-box;
   }
 
   .card.small {
@@ -415,14 +409,14 @@ html {
     width: 100%;
   }
 
-  .card h4 {
+  .card-title {
     margin: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
   }
 
-  .card p2 {
+  .card-description {
     height: 62px;
     font-size: calc(14 / 16 * 1rem);
     line-height: 1.4;
@@ -495,11 +489,6 @@ html {
     text-align: center;
   }
 
-  .modal h4,
-  .modal p {
-    margin: 0;
-  }
-
   .modal .actions {
     display: flex;
     flex-direction: row;
@@ -538,15 +527,15 @@ html {
   }
 
   /*** Tables ***/
-  table {
+  .table {
     width: 100%;
     padding: $spacing-4;
     border-radius: $spacing-2;
     border: 1px solid $colors-primary-100;
     background: #fff;
   }
-  table th,
-  table td {
+  .table th,
+  .table td {
     padding: $spacing-2;
     text-align: left;
   }
@@ -582,5 +571,50 @@ html {
   }
   .tooltip:hover .tooltip-content {
     visibility: visible;
+  }
+
+  /*** Accordions ***/
+  .accordion-container {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: $spacing-3 $spacing-4;
+    border-radius: 16px;
+    border: 1px solid $colors-primary-100;
+    background: $colors-primary-0;
+    display: flex;
+    gap: $spacing-3;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .accordion-item {
+    width: 100%;
+  }
+
+  .accordion-trigger {
+    width: 100%;
+    display: block;
+    text-align: left;
+    border: none;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .accordion-trigger::marker {
+    display: none !important;
+  }
+
+  .accordion-title {
+    display: inline;
+  }
+  .accordion-icon {
+    transition: transform 0.5s;
+  }
+
+  .accordion-item[open] .accordion-icon {
+    transform: rotate(180deg);
   }
 }
