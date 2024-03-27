@@ -256,6 +256,7 @@ p {
   background: #ffffff;
   border-color: #ebedef;
   color: #0a2540;
+  padding: 12px;
 }
 .rtsdk .btn-icon:hover {
   background: #f3f5f6;
