@@ -335,34 +335,57 @@ p {
     border-color: $colors-danger-500;
   }
 
+  .input-checkbox {
+    width: auto;
+  }
+  .input-radio {
+    border-radius: 50%;
+  }
+  .input-checkbox,
   .input-radio {
     appearance: none;
     -webkit-appearance: none;
-    border-radius: 50%;
     background: $colors-primary-0;
     border: 3px solid $colors-primary-0;
     outline: 1px solid $colors-primary-100;
     padding: $spacing-2;
     cursor: pointer;
   }
+
+  .input-checkbox:hover,
   .input-radio:hover {
     outline-color: $colors-primary-500;
   }
-  .input-radio:checked {
-    background: $colors-primary-900;
-    outline-color: $colors-primary-900;
-  }
+  .input-checkbox:disabled,
   .input-radio:disabled {
     background: $colors-primary-100;
     border-color: $colors-primary-100;
     outline-color: $colors-primary-100;
     cursor: not-allowed;
   }
+  .input-checkbox.input-error,
   .input-radio.input-error {
     outline-color: $colors-danger-500;
   }
+
+  .input-checkbox:checked {
+    background-image: url(https://sdk-style.s3.amazonaws.com/icons/check.svg);
+    background-size: contain;
+    outline-color: $colors-primary-900;
+  }
+  .input-checkbox.input-error:checked {
+    background-image: url(https://sdk-style.s3.amazonaws.com/icons/check.svg);
+    background-size: contain;
+    outline-color: $colors-danger-500;
+  }
+
+  .input-radio:checked {
+    background: $colors-primary-900;
+    outline-color: $colors-primary-900;
+  }
   .input-radio.input-error:checked {
     background: $colors-danger-500;
+    outline-color: $colors-danger-500;
   }
 
   /*** Cards ***/

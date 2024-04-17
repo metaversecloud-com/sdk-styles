@@ -290,34 +290,50 @@ p {
   color: #0a2540;
   border-color: #cc4040;
 }
+.rtsdk .input-checkbox {
+  width: auto;
+}
 .rtsdk .input-radio {
+  border-radius: 50%;
+}
+.rtsdk .input-checkbox, .rtsdk .input-radio {
   appearance: none;
   -webkit-appearance: none;
-  border-radius: 50%;
   background: #ffffff;
   border: 3px solid #ffffff;
   outline: 1px solid #ebedef;
   padding: 8px;
   cursor: pointer;
 }
-.rtsdk .input-radio:hover {
+.rtsdk .input-checkbox:hover, .rtsdk .input-radio:hover {
   outline-color: #6c7c8c;
 }
-.rtsdk .input-radio:checked {
-  background: #0a2540;
-  outline-color: #0a2540;
-}
-.rtsdk .input-radio:disabled {
+.rtsdk .input-checkbox:disabled, .rtsdk .input-radio:disabled {
   background: #ebedef;
   border-color: #ebedef;
   outline-color: #ebedef;
   cursor: not-allowed;
 }
-.rtsdk .input-radio.input-error {
+.rtsdk .input-checkbox.input-error, .rtsdk .input-radio.input-error {
   outline-color: #cc4040;
+}
+.rtsdk .input-checkbox:checked {
+  background-image: url(https://sdk-style.s3.amazonaws.com/icons/check.svg);
+  background-size: contain;
+  outline-color: #0a2540;
+}
+.rtsdk .input-checkbox.input-error:checked {
+  background-image: url(https://sdk-style.s3.amazonaws.com/icons/check.svg);
+  background-size: contain;
+  outline-color: #cc4040;
+}
+.rtsdk .input-radio:checked {
+  background: #0a2540;
+  outline-color: #0a2540;
 }
 .rtsdk .input-radio.input-error:checked {
   background: #cc4040;
+  outline-color: #cc4040;
 }
 .rtsdk .card {
   width: 100%;
