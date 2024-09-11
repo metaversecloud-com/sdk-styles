@@ -401,6 +401,14 @@ p {
     box-sizing: border-box;
   }
 
+  .card.success {
+    border-color: $colors-success-700;
+  }
+
+  .card.danger {
+    border-color: $colors-danger-900;
+  }
+
   .card.small {
     flex-direction: row;
   }
@@ -503,6 +511,8 @@ p {
     display: flex;
     padding: $spacing-5 $spacing-4 $spacing-4 $spacing-4;
     width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
     flex-direction: column;
     gap: $spacing-2;
     border-radius: $spacing-2;

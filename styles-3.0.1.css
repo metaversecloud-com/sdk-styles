@@ -296,7 +296,8 @@ p {
 .rtsdk .input-radio {
   border-radius: 50%;
 }
-.rtsdk .input-checkbox, .rtsdk .input-radio {
+.rtsdk .input-checkbox,
+.rtsdk .input-radio {
   appearance: none;
   -webkit-appearance: none;
   background: #ffffff;
@@ -305,16 +306,19 @@ p {
   padding: 8px;
   cursor: pointer;
 }
-.rtsdk .input-checkbox:hover, .rtsdk .input-radio:hover {
+.rtsdk .input-checkbox:hover,
+.rtsdk .input-radio:hover {
   outline-color: #6c7c8c;
 }
-.rtsdk .input-checkbox:disabled, .rtsdk .input-radio:disabled {
+.rtsdk .input-checkbox:disabled,
+.rtsdk .input-radio:disabled {
   background: #ebedef;
   border-color: #ebedef;
   outline-color: #ebedef;
   cursor: not-allowed;
 }
-.rtsdk .input-checkbox.input-error, .rtsdk .input-radio.input-error {
+.rtsdk .input-checkbox.input-error,
+.rtsdk .input-radio.input-error {
   outline-color: #cc4040;
 }
 .rtsdk .input-checkbox:checked {
@@ -345,6 +349,12 @@ p {
   gap: 12px;
   flex-direction: column;
   box-sizing: border-box;
+}
+.rtsdk .card.success {
+  border-color: #00875a;
+}
+.rtsdk .card.danger {
+  border-color: #c62828;
 }
 .rtsdk .card.small {
   flex-direction: row;
@@ -434,6 +444,8 @@ p {
   display: flex;
   padding: 24px 16px 16px 16px;
   width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
   flex-direction: column;
   gap: 8px;
   border-radius: 8px;
