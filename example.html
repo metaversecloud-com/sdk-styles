@@ -2,8 +2,8 @@
 <html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="https://sdk-style.s3.amazonaws.com/styles-3.0.1.css" />
-    <!-- <link rel="stylesheet" href="./styles-3.0.1.css" /> -->
+    <link rel="stylesheet" href="https://sdk-style.s3.amazonaws.com/styles-3.0.2.css" />
+    <!-- <link rel="stylesheet" href="./styles-3.0.2.css" /> -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
     <script
@@ -26,9 +26,6 @@
         margin: 32px 0 12px !important;
       }
       .column {
-        width: 30%;
-        float: left;
-        margin: 0 10px;
       }
       pre {
         margin: 6px 0;
@@ -45,198 +42,238 @@
 
     <script>
       $(document).ready(function () {
-        document.getElementById("open").addEventListener("click", () => {
-          document.getElementById("modalExample").classList.remove("hidden");
+        document.getElementById("open1").addEventListener("click", () => {
+          document.getElementById("modalExample1").classList.remove("hidden");
         });
-        document.getElementById("close").addEventListener("click", () => {
-          document.getElementById("modalExample").classList.add("hidden");
+        document.getElementById("close1").addEventListener("click", () => {
+          document.getElementById("modalExample1").classList.add("hidden");
+        });
+        document.getElementById("open2").addEventListener("click", () => {
+          document.getElementById("modalExample2").classList.remove("hidden");
+        });
+        document.getElementById("close2").addEventListener("click", () => {
+          document.getElementById("modalExample2").classList.add("hidden");
         });
       });
     </script>
   </head>
 
   <body class="rtsdk">
-    <!-- **** BEGIN Column **** -->
-    <div class="column">
-      <!-- Typography -->
-      <h2 class="header h2">Typography</h2>
+    <div style="display: grid; gap: 10px; grid-template-columns: repeat(3, minmax(0, 1fr))">
+      <!-- **** BEGIN Column **** -->
+      <div class="column">
+        <!-- Typography -->
+        <h2 class="header h2">Typography</h2>
 
-      <h1 class="h1">This is heading 1</h1>
-      <h2 class="h2">This is heading 2</h2>
-      <h3 class="h3">This is heading 3</h3>
-      <h4 class="h4">This is heading 4</h4>
-      <h5 class="h5">This is heading 5</h5>
-      <h6 class="h6">This is heading 6</h6>
+        <h1 class="h1">This is heading 1</h1>
+        <h2 class="h2">This is heading 2</h2>
+        <h3 class="h3">This is heading 3</h3>
+        <h4 class="h4">This is heading 4</h4>
+        <h5 class="h5">This is heading 5</h5>
+        <h6 class="h6">This is heading 6</h6>
 
-      <p class="p1">This is a paragraph (.p1)</p>
+        <p class="p1">This is a paragraph (.p1)</p>
 
-      <p class="p2">This is a paragraph with the .p2 class applied</p>
+        <p class="p2">This is a paragraph with the .p2 class applied</p>
 
-      <p class="p3">This is a paragraph with the .p3 class applied</p>
+        <p class="p3">This is a paragraph with the .p3 class applied</p>
 
-      <p class="p4">This is a paragraph with the .p4 class applied</p>
+        <p class="p4">This is a paragraph with the .p4 class applied</p>
 
-      <hr />
+        <hr />
 
-      <p class="p4">
-        <em>
-          Any of the headings can also be styled using html tags or classes. For example: &lt;h1&gt; and &lt;p
-          class=".h1"&gt; will render the same.
-        </em>
-      </p>
+        <p class="p4">
+          <em>
+            Any of the headings can also be styled using html tags or classes. For example: &lt;h1&gt; and &lt;p
+            class=".h1"&gt; will render the same.
+          </em>
+        </p>
 
-      <!-- Buttons -->
-      <h2 class="header h2">Buttons</h2>
+        <!-- Buttons -->
+        <h2 class="header h2">Buttons</h2>
 
-      <div style="display: block; margin: 0 0 20px">
-        <button class="btn">Primary</button>
-        <button class="btn" disabled>Disabled</button>
-        <pre><code>&lt;button class="btn"&gt;Primary&lt;/button&gt;</code></pre>
-      </div>
-
-      <div style="display: block; margin: 0 0 20px">
-        <button class="btn btn-outline">Outline</button>
-        <button class="btn btn-outline" disabled>Outline Disabled</button>
-        <pre><code>&lt;button class="btn btn-outline"&gt;Outline&lt;/button&gt;</code></pre>
-      </div>
-
-      <div style="display: block; margin: 0 0 20px">
-        <button class="btn btn-text">Text</button>
-        <button class="btn btn-text" disabled>Text Disabled</button>
-        <pre><code>&lt;button class="btn btn-text"&gt;Text&lt;/button&gt;</code></pre>
-      </div>
-
-      <div style="display: block; margin: 0 0 20px">
-        <button class="btn btn-success">Success</button>
-        <pre><code>&lt;button class="btn btn-success"&gt;Text&lt;/button&gt;</code></pre>
-      </div>
-
-      <div style="display: block; margin: 0 0 20px">
-        <button class="btn btn-success-outline">Success Outlined</button>
-        <pre><code>&lt;button class="btn btn-success-outline"&gt;Text&lt;/button&gt;</code></pre>
-      </div>
-
-      <button class="btn btn-danger">Danger</button>
-      <pre><code>&lt;button class="btn btn-danger"&gt;Text&lt;/button&gt;</code></pre>
-
-      <button class="btn btn-danger-outline">Danger Outlined</button>
-      <pre><code>&lt;button class="btn btn-danger-outline"&gt;Text&lt;/button&gt;</code></pre>
-
-      <!-- Icon Buttons -->
-      <h2 class="header h2">Icon Buttons</h2>
-      <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/edit.svg" /></button>
-      <button class="btn btn-icon" disabled><img src="https://sdk-style.s3.amazonaws.com/icons/cog.svg" /></button>
-      <pre><code>&lt;button class="btn btn-icon"&gt;<img src="https://sdk-style.s3.amazonaws.com/icons/info.svg" />&lt;/button&gt;</code></pre>
-
-      <!-- Tabs -->
-      <h2 class="header h2">Tabs</h2>
-      <div style="display: block; margin: 0 0 20px">
-        <div class="tab-container">
-          <button class="btn">Selected</button>
+        <div style="display: block; margin: 0 0 20px">
+          <button class="btn">Primary</button>
           <button class="btn" disabled>Disabled</button>
+          <pre><code>&lt;button class="btn"&gt;Primary&lt;/button&gt;</code></pre>
         </div>
-      </div>
-      <div class="tab-container">
-        <button class="btn btn-text">Unselected</button>
-        <button class="btn">Selected</button>
-      </div>
-      <pre>
+
+        <div style="display: block; margin: 0 0 20px">
+          <button class="btn btn-outline">Outline</button>
+          <button class="btn btn-outline" disabled>Outline Disabled</button>
+          <pre><code>&lt;button class="btn btn-outline"&gt;Outline&lt;/button&gt;</code></pre>
+        </div>
+
+        <div style="display: block; margin: 0 0 20px">
+          <button class="btn btn-text">Text</button>
+          <button class="btn btn-text" disabled>Text Disabled</button>
+          <pre><code>&lt;button class="btn btn-text"&gt;Text&lt;/button&gt;</code></pre>
+        </div>
+
+        <div style="display: block; margin: 0 0 20px">
+          <button class="btn btn-success">Success</button>
+          <pre><code>&lt;button class="btn btn-success"&gt;Text&lt;/button&gt;</code></pre>
+        </div>
+
+        <div style="display: block; margin: 0 0 20px">
+          <button class="btn btn-success-outline">Success Outlined</button>
+          <pre><code>&lt;button class="btn btn-success-outline"&gt;Text&lt;/button&gt;</code></pre>
+        </div>
+
+        <button class="btn btn-danger">Danger</button>
+        <pre><code>&lt;button class="btn btn-danger"&gt;Text&lt;/button&gt;</code></pre>
+
+        <button class="btn btn-danger-outline">Danger Outlined</button>
+        <pre><code>&lt;button class="btn btn-danger-outline"&gt;Text&lt;/button&gt;</code></pre>
+
+        <!-- Icon Buttons -->
+        <h2 class="header h2">Icon Buttons</h2>
+        <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/edit.svg" /></button>
+        <button class="btn btn-icon" disabled><img src="https://sdk-style.s3.amazonaws.com/icons/cog.svg" /></button>
+        <pre><code>&lt;button class="btn btn-icon"&gt;<img src="https://sdk-style.s3.amazonaws.com/icons/info.svg" />&lt;/button&gt;</code></pre>
+
+        <!-- Tabs -->
+        <h2 class="header h2">Tabs</h2>
+        <div style="display: block; margin: 0 0 20px">
+          <div class="tab-container">
+            <button class="btn">Selected</button>
+            <button class="btn" disabled>Disabled</button>
+          </div>
+        </div>
+        <div class="tab-container">
+          <button class="btn btn-text">Unselected</button>
+          <button class="btn">Selected</button>
+        </div>
+        <pre>
 <code>&lt;div class="tab-container"&gt;
   &lt;button&gt;Selected&lt;/button&gt;
   &lt;button class="btn btn-text"&gt;Unselected&lt;/button&gt;
 &lt;/div&gt;</code>
 </pre>
 
-      <!-- Chips -->
-      <h2 class="header h2">Chips</h2>
-      <div class="chip">Chip</div>
-      <div class="chip chip-success">Success</div>
-      <div class="chip chip-danger">Danger</div>
-      <pre>
+        <h2 class="header h2">Tabs (text)</h2>
+        <div style="display: block; margin: 0 0 20px">
+          <div class="tab-text-container">
+            <button class="btn btn-text active">Selected</button>
+            <button class="btn btn-text">Unselected</button>
+            <button class="btn btn-text" disabled>Disabled</button>
+          </div>
+        </div>
+        <pre>
+<code>&lt;div class="tab-text-container"&gt;
+  &lt;button&gt;Selected&lt;/button&gt;
+  &lt;button class="btn btn-text active"&gt;Selected&lt;/button&gt;
+  &lt;button class="btn btn-text"&gt;Unselected&lt;/button&gt;
+  &lt;button class="btn btn-text" disabled&gt;Disabled&lt;/button&gt;
+&lt;/div&gt;</code>
+</pre>
+
+        <!-- Chips -->
+        <h2 class="header h2">Chips</h2>
+        <div class="chip">Chip</div>
+        <div class="chip chip-success">Success</div>
+        <div class="chip chip-danger">Danger</div>
+        <pre>
 <code>&lt;div class="chip"&gt;Chip&lt;/div&gt;
 &lt;div class="chip chip-success"&gt;Success&lt;/div&gt;
 &lt;div class="chip chip-danger"&gt;Danger&lt;/div&gt;</code>
 </pre>
 
-      <!-- Tooltips -->
-      <h2 class="header h2">Tooltips</h2>
-      <div class="tooltip">
-        <span class="tooltip-content">I'm a tooltip!</span>
-        I have a tooltip, hover over me!
-      </div>
-      <pre>
+        <!-- Tooltips -->
+        <h2 class="header h2">Tooltips</h2>
+        <div class="tooltip">
+          <span class="tooltip-content">I'm a tooltip!</span>
+          I have a tooltip, hover over me!
+        </div>
+        <br />
+        <div class="tooltip">
+          <span class="tooltip-content" style="width: 100px; top: -80px"
+            >I'm a tooltip! A really really long tooltip.</span
+          >
+          I have a long tooltip, hover over me!
+        </div>
+        <pre>
 <code>&lt;div class="tooltip"&gt;
   &lt;span class="tooltip-content"&gt;I'm a tooltip!&lt;/span&gt;
   I have a tooltip, hover over me!
 &lt;/div&gt;</code>
 </pre>
 
-      <!-- Timer -->
-      <h2 class="header h2">Timer</h2>
-      <div class="timer">&#x231B; 12:34</div>
-      <pre><code>&lt;div class="timer"&gt;&#x231B;  12:34&lt;/div&gt;</code></pre>
+        <!-- Timer -->
+        <h2 class="header h2">Timer</h2>
+        <div class="timer">&#x231B; 12:34</div>
+        <pre><code>&lt;div class="timer"&gt;&#x231B;  12:34&lt;/div&gt;</code></pre>
 
-      <!-- **** END Column **** -->
-    </div>
+        <!-- **** END Column **** -->
+      </div>
 
-    <!-- **** BEGIN Column **** -->
-    <div class="column">
-      <!-- Inputs -->
-      <h2 class="header h2">Inputs</h2>
-      <div style="display: block; margin: 0 0 20px">
-        <label class="label">Enabled</label>
-        <input class="input" type="text" placeholder="placeholder" />
-        <pre>
+      <!-- **** BEGIN Column **** -->
+      <div class="column">
+        <!-- Inputs -->
+        <h2 class="header h2">Inputs</h2>
+        <div style="display: block; margin: 0 0 20px">
+          <label class="label">Enabled</label>
+          <input class="input" type="text" placeholder="placeholder" />
+          <pre>
 <code>&lt;label&gt;Enabled&lt;/label&gt;
 &lt;input class="input" type="text" /&gt;</code>
 </pre>
-      </div>
+        </div>
 
-      <div style="display: block; margin: 0 0 20px">
-        <label class="label">Textarea</label>
-        <textarea class="input" rows="5" maxlength="120"></textarea>
-      </div>
+        <div style="display: block; margin: 0 0 20px">
+          <label class="label">Textarea</label>
+          <textarea class="input" rows="5" maxlength="120"></textarea>
+        </div>
 
-      <div style="display: block; margin: 0 0 20px">
-        <label class="label">With Value</label>
-        <input class="input" type="text" value="value" />
-      </div>
+        <div style="display: block; margin: 0 0 20px">
+          <label class="label">With Value</label>
+          <input class="input" type="text" value="value" />
+        </div>
 
-      <div style="display: block; margin: 0 0 20px">
-        <label class="label">Disabled</label>
-        <input class="input" disabled type="text" />
-      </div>
+        <div style="display: block; margin: 0 0 20px">
+          <div class="input-group">
+            <label class="label">With Character Count</label>
+            <input class="input" type="text" maxlength="10" />
+            <span class="input-char-count">0/10</span>
+            <p class="p3">A maximum of 10 characters is allowed.</p>
+          </div>
+        </div>
 
-      <div style="display: block; margin: 0 0 20px">
-        <label class="label">Error</label>
-        <input class="input input-error" type="text" value="error" />
-        <p class="p3 text-error">An error has occurred</p>
-        <pre>
+        <div style="display: block; margin: 0 0 20px">
+          <label class="label">Disabled</label>
+          <input class="input" disabled type="text" />
+        </div>
+
+        <div style="display: block; margin: 0 0 20px">
+          <label class="label">Error</label>
+          <input class="input input-error" type="text" value="error" />
+          <p class="p3 text-error">An error has occurred</p>
+          <pre>
 <code>&lt;label&gt;Error&lt;/label&gt;
 &lt;input class="input input-error" type="text" /&gt;
-&lt;p class="p3 text-error"&gt;An error has occurred&lt;/label&gt;</code>
+&lt;p class="p3 text-error"&gt;An error has occurred&lt;/p&gt;</code>
 </pre>
-      </div>
+        </div>
 
-      <h2 class="header h2">Dropdown</h2>
-      <div style="display: block; margin: 0 0 10px">
-        <select class="input">
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
-          <option value="4">Option 4</option>
-          <option value="5">Option 5</option>
-          <option value="6">Option 6</option>
-        </select>
-      </div>
-      <div style="display: block; margin: 0 0 20px">
-        <label class="label">Error</label>
-        <select class="input input-error">
-          <option value="1">Option 1</option>
-        </select>
-        <p class="p3 text-error">An error has occurred</p>
-      </div>
-      <pre>
+        <h2 class="header h2">Dropdown</h2>
+        <div style="display: block; margin: 0 0 10px">
+          <select class="input">
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+            <option value="4">Option 4</option>
+            <option value="5">Option 5</option>
+            <option value="6">Option 6</option>
+          </select>
+        </div>
+        <div style="display: block; margin: 0 0 20px">
+          <label class="label">Error</label>
+          <select class="input input-error">
+            <option value="1">Option 1</option>
+          </select>
+          <p class="p3 text-error">An error has occurred</p>
+        </div>
+        <pre>
 <code>&lt;select class="input"&gt;
   &lt;option value="1"&gt;Option 1&lt;/option>&gt;
   &lt;option value="2"&gt;Option 2&lt;/option>&gt;
@@ -244,113 +281,113 @@
 &lt;/select&gt;</code>
 </pre>
 
-      <h2 class="header h2">Radio Buttons</h2>
-      <div style="display: block; margin: 0 0 10px">
-        <label class="label">
-          <input class="input-radio" type="radio" name="radio" />
-          Radio Button
-        </label>
-        <pre>
+        <h2 class="header h2">Radio Buttons</h2>
+        <div style="display: block; margin: 0 0 10px">
+          <label class="label">
+            <input class="input-radio" type="radio" name="radio" />
+            Radio Button
+          </label>
+          <pre>
 <code>&lt;label&gt;
   &lt;input class="input-radio" type="radio" name="radio" /&gt;
   Radio Button
 &lt;/label&gt;</code>
 </pre>
-      </div>
-      <div style="display: block; margin: 0 0 10px">
-        <label class="label">
-          <input type="radio" class="input-radio input-error" name="radio" />
-          Error
-        </label>
-        <pre>
+        </div>
+        <div style="display: block; margin: 0 0 10px">
+          <label class="label">
+            <input type="radio" class="input-radio input-error" name="radio" />
+            Error
+          </label>
+          <pre>
 <code>&lt;label&gt;
   &lt;input type="radio" name="radio" class="input-radio input-error" /&gt;
   Radio Button
 &lt;/label&gt;</code>
 </pre>
-      </div>
-      <label class="label">
-        <input class="input-radio" type="radio" disabled />
-        Disabled
-      </label>
-      <pre>
+        </div>
+        <label class="label">
+          <input class="input-radio" type="radio" disabled />
+          Disabled
+        </label>
+        <pre>
 <code>&lt;label&gt;
   &lt;input class="input-radio" type="radio" name="radio" disabled /&gt;
   Radio Button
 &lt;/label&gt;</code>
 </pre>
 
-      <h2 class="header h2">Checkboxes</h2>
-      <div style="display: block; margin: 0 0 10px">
-        <label class="label">
-          <input class="input-checkbox" type="checkbox" />
-          Checkboxes
-        </label>
-        <pre>
+        <h2 class="header h2">Checkboxes</h2>
+        <div style="display: block; margin: 0 0 10px">
+          <label class="label">
+            <input class="input-checkbox" type="checkbox" />
+            Checkboxes
+          </label>
+          <pre>
 <code>&lt;label&gt;
   &lt;input class="input input-checkbox" type="checkbox" /&gt;
   Checkbox
 &lt;/label&gt;</code>
 </pre>
-      </div>
-      <div style="display: block; margin: 0 0 10px">
-        <label class="label">
-          <input type="checkbox" class="input-checkbox input-error" />
-          Error
-        </label>
-        <pre>
+        </div>
+        <div style="display: block; margin: 0 0 10px">
+          <label class="label">
+            <input type="checkbox" class="input-checkbox input-error" />
+            Error
+          </label>
+          <pre>
 <code>&lt;label&gt;
   &lt;input type="checkbox" class="input input-checkbox input-error" /&gt;
   Error
 &lt;/label&gt;</code>
 </pre>
-      </div>
-      <label class="label">
-        <input class="input-checkbox" type="checkbox" disabled />
-        Disabled
-      </label>
-      <pre>
+        </div>
+        <label class="label">
+          <input class="input-checkbox" type="checkbox" disabled />
+          Disabled
+        </label>
+        <pre>
 <code>&lt;label&gt;
-&lt;input class="input-checkbox" type="checkbox" disabled /&gt;
-Disabled
+  &lt;input class="input-checkbox" type="checkbox" disabled /&gt;
+  Disabled
 &lt;/label&gt;</code>
 </pre>
-      <!-- **** END Column **** -->
-    </div>
+        <!-- **** END Column **** -->
+      </div>
 
-    <!-- **** BEGIN Column **** -->
-    <div class="column">
-      <!-- Table -->
-      <h2 class="header h2">Tables</h2>
-      <table class="table">
-        <tr>
-          <th>Column 1</th>
-          <th>Column 2</th>
-          <th>Column 3</th>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>World</td>
-          <td>
-            <div class="chip">Chip</div>
-          </td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>World</td>
-          <td>
-            <div class="chip chip-success">Success</div>
-          </td>
-        </tr>
-        <tr>
-          <td>Hello</td>
-          <td>World</td>
-          <td>
-            <div class="chip chip-danger">Danger</div>
-          </td>
-        </tr>
-      </table>
-      <pre>
+      <!-- **** BEGIN Column **** -->
+      <div class="column">
+        <!-- Table -->
+        <h2 class="header h2">Tables</h2>
+        <table class="table">
+          <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+          </tr>
+          <tr>
+            <td>Hello</td>
+            <td>World</td>
+            <td>
+              <div class="chip">Chip</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Hello</td>
+            <td>World</td>
+            <td>
+              <div class="chip chip-success">Success</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Hello</td>
+            <td>World</td>
+            <td>
+              <div class="chip chip-danger">Danger</div>
+            </td>
+          </tr>
+        </table>
+        <pre>
 <code>&lt;table class="table"&gt;
   &lt;tr&gt;
     &lt;th&gt;Column 1&lt;/th&gt;
@@ -365,65 +402,77 @@ Disabled
 &lt;/table&gt;</code>
 </pre>
 
-      <!-- Cards -->
-      <h2 class="header h2">Cards</h2>
+        <!-- Cards -->
+        <h2 class="header h2">Cards</h2>
 
-      <div class="card small">
-        <div class="card-image"></div>
-        <div class="card-details">
-          <h4 class="card-title h4">Card title (h4)</h4>
-          <p class="card-description p2">Card description (p2).</p>
-          <div class="card-actions">
-            <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/edit.svg" /></button>
-            <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/cog.svg" /></button>
-            <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/info.svg" /></button>
+        <div class="card small">
+          <div class="card-image"></div>
+          <div class="card-details">
+            <h4 class="card-title h4">Card title (h4)</h4>
+            <p class="card-description p2">Card description (p2).</p>
+            <div class="card-actions">
+              <div class="tooltip">
+                <span class="tooltip-content"> Edit </span>
+                <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/edit.svg" /></button>
+              </div>
+              <div class="tooltip">
+                <span class="tooltip-content"> Settings </span>
+                <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/cog.svg" /></button>
+              </div>
+              <div class="tooltip">
+                <span class="tooltip-content"> Info </span>
+                <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/info.svg" /></button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <br />
+        <br />
 
-      <div class="card">
-        <div class="card-image"></div>
-        <div class="card-details">
-          <h4 class="card-title h4">Card title (h4)</h4>
-          <p class="card-description p2">Card description (p2).</p>
-          <div class="card-actions">
-            <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/edit.svg" /></button>
-            <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/cog.svg" /></button>
-            <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/info.svg" /></button>
+        <div class="card">
+          <div class="card-image"></div>
+          <div class="card-details">
+            <h4 class="card-title h4">Card title (h4)</h4>
+            <p class="card-description p2">Card description (p2).</p>
+            <div class="card-actions">
+              <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/edit.svg" /></button>
+              <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/cog.svg" /></button>
+              <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/info.svg" /></button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <br />
+        <br />
 
-      <div class="card horizontal">
-        <div class="card-details">
-          <h4 class="card-title h4">Card title (h4)</h4>
-          <div class="card-actions">
-            <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/edit.svg" /></button>
+        <div class="card horizontal">
+          <div class="card-details">
+            <h4 class="card-title h4">Card title (h4)</h4>
+            <div class="card-actions">
+              <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/edit.svg" /></button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <br />
+        <br />
 
-      <div class="card small success">
-        <div class="card-details">
-          <h4 class="card-title h4">Card title (h4)</h4>
+        <div class="card small success">
+          <div class="card-details">
+            <h4 class="card-title h4">Card title (h4)</h4>
+            <div class="card-actions">
+              <button class="btn btn-icon"><img src="https://sdk-style.s3.amazonaws.com/icons/edit.svg" /></button>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <br />
+        <br />
 
-      <div class="card small danger">
-        <div class="card-details">
-          <h4 class="card-title h4">Card title (h4)</h4>
+        <div class="card small danger">
+          <div class="card-details">
+            <h4 class="card-title h4">Card title (h4)</h4>
+          </div>
         </div>
-      </div>
 
-      <pre>
+        <pre>
 <code>&lt;div class="card"&gt;
   &lt;div class="card-image"&gt;&lt;/div&gt;
   &lt;div class="card-details"&gt;
@@ -444,27 +493,27 @@ Disabled
 &lt;/div&gt;</code>
 </pre>
 
-      <!-- Accordions -->
-      <h2 class="header h2">Accordions</h2>
-      <section id="accordion" class="accordion">
-        <div class="accordion-container">
-          <details class="accordion-item">
-            <summary class="accordion-trigger">
-              <span class="accordion-title h4">Title</span>
-              <img
-                class="accordion-icon"
-                aria-hidden="true"
-                src="https://sdk-style.s3.amazonaws.com/icons/chevronDown.svg"
-              />
-            </summary>
-            <div class="accordion-content">
-              <p>This toggles collapsible content based on user interaction.</p>
-            </div>
-          </details>
-        </div>
-      </section>
+        <!-- Accordions -->
+        <h2 class="header h2">Accordions</h2>
+        <section id="accordion" class="accordion">
+          <div class="accordion-container">
+            <details class="accordion-item">
+              <summary class="accordion-trigger">
+                <span class="accordion-title h4">Title</span>
+                <img
+                  class="accordion-icon"
+                  aria-hidden="true"
+                  src="https://sdk-style.s3.amazonaws.com/icons/chevronDown.svg"
+                />
+              </summary>
+              <div class="accordion-content">
+                <p>This toggles collapsible content based on user interaction.</p>
+              </div>
+            </details>
+          </div>
+        </section>
 
-      <pre>
+        <pre>
 <code>&lt;section id="accordion" class="accordion"&gt;
   &lt;div class="accordion-container"&gt;;
     &lt;details class="accordion-item"&gt;
@@ -480,24 +529,42 @@ Disabled
 &lt;/section&gt;</code>
 </pre>
 
-      <!-- Modals -->
-      <h2 class="header h2">Modals</h2>
+        <!-- Modals -->
+        <h2 class="header h2">Modals</h2>
 
-      <button id="open" class="btn">Open Modal</button>
-      <div id="modalExample" class="modal-container hidden">
-        <div class="modal">
-          <h4 class="h4">Modal title (h4)</h4>
-          <p2
-            >Modal description (p2). Bacon ipsum dolor amet pork chuck frankfurter alcatra. Turducken short loin cow
-            meatloaf.</p2
-          >
-          <div class="actions">
-            <button class="btn btn-outline">Outline</button>
-            <button class="btn" id="close">Close</button>
+        <button id="open1" class="btn">Open Modal</button>
+        <div id="modalExample1" class="modal-container hidden">
+          <div class="modal">
+            <h4 class="h4">Modal title (h4)</h4>
+            <p2
+              >Modal description (p2). Bacon ipsum dolor amet pork chuck frankfurter alcatra. Turducken short loin cow
+              meatloaf.</p2
+            >
+            <div class="actions">
+              <button class="btn btn-outline">Outline</button>
+              <button class="btn" id="close1">Close</button>
+            </div>
           </div>
         </div>
-      </div>
-      <pre>
+
+        <button id="open2" class="btn">Open Modal w/ Header</button>
+        <div id="modalExample2" class="modal-container hidden">
+          <div class="modal">
+            <div class="modal-header">
+              <h4 class="h4">Modal title (h4)</h4>
+              <img src="https://sdk-style.s3.amazonaws.com/icons/x.svg" style="width: 10px" />
+            </div>
+            <p2
+              >Modal description (p2). Bacon ipsum dolor amet pork chuck frankfurter alcatra. Turducken short loin cow
+              meatloaf.</p2
+            >
+            <div class="actions">
+              <button class="btn btn-outline">Outline</button>
+              <button class="btn" id="close2">Close</button>
+            </div>
+          </div>
+        </div>
+        <pre>
 <code>&lt;div class="modal-container"&gt;
   &lt;div class="modal"&gt;
     &lt;h4&gt;Modal title (h4)&lt;/h4&gt;
@@ -509,6 +576,7 @@ Disabled
   &lt;/div&gt;
 &lt;/div&gt;</code>
 </pre>
+      </div>
     </div>
   </body>
 </html>

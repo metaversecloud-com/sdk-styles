@@ -53,6 +53,7 @@ p {
 .rtsdk {
   /*** Typography ***/
   /* Heading 1 */
+  h1,
   .h1 {
     color: $colors-primary-900;
     font-family: Quicksand;
@@ -65,6 +66,7 @@ p {
   }
 
   /* Heading 2 */
+  h2,
   .h2 {
     color: $colors-primary-900;
     font-family: Quicksand;
@@ -76,6 +78,7 @@ p {
   }
 
   /* Heading 3 */
+  h3,
   .h3 {
     color: $colors-primary-900;
     font-family: Quicksand;
@@ -88,6 +91,7 @@ p {
   }
 
   /* Heading 4 */
+  h4,
   .h4 {
     color: $colors-primary-900;
     font-family: Quicksand;
@@ -99,6 +103,7 @@ p {
   }
 
   /* Heading 5 */
+  h5,
   .h5 {
     color: $colors-primary-900;
     font-family: Quicksand;
@@ -111,6 +116,7 @@ p {
   }
 
   /* Heading 6 */
+  h6,
   .h6 {
     color: $colors-primary-900;
     font-family: Quicksand;
@@ -123,6 +129,7 @@ p {
   }
 
   /* Body 1 */
+  p,
   .p,
   .p1 {
     color: $colors-primary-700;
@@ -180,6 +187,14 @@ p {
     font-weight: 400;
     line-height: normal;
     margin: 0;
+  }
+
+  .text-success {
+    color: $colors-success-700;
+  }
+
+  .text-muted {
+    color: $colors-primary-500;
   }
 
   /*** Buttons ***/
@@ -335,6 +350,21 @@ p {
     border-color: $colors-danger-500;
   }
 
+  .input-group {
+    position: relative;
+    .input {
+      padding-right: 40px;
+    }
+    .input-char-count {
+      color: $colors-primary-700;
+      font-family: "Open Sans";
+      font-size: 10px;
+      position: absolute;
+      top: 34px;
+      right: 10px;
+    }
+  }
+
   .input-checkbox {
     width: auto;
   }
@@ -347,7 +377,7 @@ p {
     -webkit-appearance: none;
     background: $colors-primary-0;
     border: 3px solid $colors-primary-0;
-    outline: 1px solid $colors-primary-100;
+    outline: 1px solid $colors-primary-500;
     padding: $spacing-2;
     cursor: pointer;
   }
@@ -491,6 +521,7 @@ p {
   .modal-container {
     width: 100%;
     height: 100%;
+    max-height: 100vh;
     z-index: 999;
     position: fixed;
     top: 0;
@@ -503,6 +534,7 @@ p {
   }
 
   .modal {
+    max-height: 90vh;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -511,7 +543,6 @@ p {
     display: flex;
     padding: $spacing-5 $spacing-4 $spacing-4 $spacing-4;
     width: 90%;
-    max-height: 90vh;
     overflow-y: auto;
     flex-direction: column;
     gap: $spacing-2;
@@ -520,6 +551,14 @@ p {
     background: $colors-primary-0;
     box-shadow: 0px 15px 12px 0px rgba(0, 0, 0, 0.11), 0px 19px 38px 0px rgba(0, 0, 0, 0.15);
     text-align: center;
+  }
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -$spacing-4;
+    margin-bottom: $spacing-2;
+    text-align: left;
   }
 
   .modal .actions {
@@ -538,6 +577,20 @@ p {
     border-radius: $spacing-2;
     border: 1px solid $colors-primary-100;
     background: $colors-primary-0;
+  }
+
+  .tab-text-container {
+    display: flex;
+    width: 100%;
+    padding: $spacing-1;
+    align-items: flex-start;
+  }
+  .tab-text-container .btn-text {
+    border-bottom: 1px solid $colors-primary-100;
+    border-radius: 0;
+  }
+  .tab-text-container .btn-text.active {
+    border-bottom: 1px solid $colors-primary-900;
   }
 
   /*** Chips ***/
@@ -584,7 +637,7 @@ p {
     visibility: hidden;
     position: absolute;
     z-index: 2;
-    white-space: nowrap;
+    word-wrap: break-word;
     color: $colors-primary-0;
     background-color: $colors-primary-900;
     border-radius: $spacing-2;
@@ -593,16 +646,16 @@ p {
     left: 50%;
     transform: translate(-50%, 0%);
   }
-  .tooltip-content::before {
-    content: "";
-    position: absolute;
-    transform: rotate(45deg);
-    background-color: $colors-primary-900;
-    padding: 5px;
-    z-index: 1;
-    top: 80%;
-    left: 45%;
-  }
+  // .tooltip-content::before {
+  //   content: "";
+  //   position: absolute;
+  //   transform: rotate(45deg);
+  //   background-color: $colors-primary-900;
+  //   padding: 5px;
+  //   z-index: 1;
+  //   top: 80%;
+  //   left: 45%;
+  // }
   .tooltip:hover .tooltip-content {
     visibility: visible;
   }
