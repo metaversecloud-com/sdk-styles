@@ -17,29 +17,6 @@ p {
 .rtsdk {
   /*** Typography ***/
   /* Heading 1 */
-  /* Heading 2 */
-  /* Heading 3 */
-  /* Heading 4 */
-  /* Heading 5 */
-  /* Heading 6 */
-  /* Body 1 */
-  /* Body 2 */
-  /* Body 3 */
-  /* Body 4 */
-  /*** Buttons ***/
-  /* Outline Button */
-  /* Text Button */
-  /* Success/Danger Buttons */
-  /* Icon Button */
-  /*** Inputs ***/
-  /*** Cards ***/
-  /*** Timer ***/
-  /*** Modal ***/
-  /*** Tabs ***/
-  /*** Chips ***/
-  /*** Tables ***/
-  /*** Tooltips ***/
-  /*** Accordions ***/
 }
 .rtsdk h1,
 .rtsdk .h1 {
@@ -52,6 +29,9 @@ p {
   letter-spacing: -0.24px;
   margin: 0;
 }
+.rtsdk {
+  /* Heading 2 */
+}
 .rtsdk h2,
 .rtsdk .h2 {
   color: #0a2540;
@@ -61,6 +41,9 @@ p {
   font-weight: 500;
   line-height: 130%; /* 39px */
   margin: 0;
+}
+.rtsdk {
+  /* Heading 3 */
 }
 .rtsdk h3,
 .rtsdk .h3 {
@@ -73,6 +56,9 @@ p {
   letter-spacing: 0.06px;
   margin: 0;
 }
+.rtsdk {
+  /* Heading 4 */
+}
 .rtsdk h4,
 .rtsdk .h4 {
   color: #0a2540;
@@ -82,6 +68,9 @@ p {
   font-weight: 600;
   line-height: 130%; /* 23.4px */
   margin: 0;
+}
+.rtsdk {
+  /* Heading 5 */
 }
 .rtsdk h5,
 .rtsdk .h5 {
@@ -94,6 +83,9 @@ p {
   letter-spacing: 0.024px;
   margin: 0;
 }
+.rtsdk {
+  /* Heading 6 */
+}
 .rtsdk h6,
 .rtsdk .h6 {
   color: #0a2540;
@@ -104,6 +96,9 @@ p {
   line-height: 130%; /* 19.5px */
   letter-spacing: 0.023px;
   margin: 0;
+}
+.rtsdk {
+  /* Body 1 */
 }
 .rtsdk p,
 .rtsdk .p,
@@ -117,6 +112,9 @@ p {
   letter-spacing: 0.08px;
   margin: 0;
 }
+.rtsdk {
+  /* Body 2 */
+}
 .rtsdk .body,
 .rtsdk .p2 {
   color: #3b5166;
@@ -128,6 +126,9 @@ p {
   letter-spacing: 0.035px;
   margin: 0;
 }
+.rtsdk {
+  /* Body 3 */
+}
 .rtsdk .p3 {
   color: #3b5166;
   font-family: "Open Sans";
@@ -138,6 +139,9 @@ p {
   letter-spacing: 0.03px;
   margin: 0;
 }
+.rtsdk {
+  /* Body 4 */
+}
 .rtsdk .p4 {
   color: #3b5166;
   font-family: "Open Sans";
@@ -147,6 +151,12 @@ p {
   line-height: 140%; /* 14px */
   letter-spacing: 0.025px;
   margin: 0;
+}
+.rtsdk .text-warning {
+  color: #ffa000;
+}
+.rtsdk .text-danger {
+  color: #cc4040;
 }
 .rtsdk .text-error {
   color: #cc4040;
@@ -162,6 +172,12 @@ p {
 }
 .rtsdk .text-muted {
   color: #6c7c8c;
+}
+.rtsdk .text-white {
+  color: #ffffff;
+}
+.rtsdk {
+  /*** Buttons ***/
 }
 .rtsdk .btn {
   display: inline-flex;
@@ -193,6 +209,9 @@ p {
 .rtsdk .btn a {
   text-decoration: none;
 }
+.rtsdk {
+  /* Outline Button */
+}
 .rtsdk .btn-outline {
   background: #ffffff;
   border-color: #0a2540;
@@ -211,6 +230,9 @@ p {
   color: #d6dbdf;
   cursor: not-allowed;
 }
+.rtsdk {
+  /* Text Button */
+}
 .rtsdk .btn-text {
   background: #ffffff;
   border-color: #ffffff;
@@ -225,6 +247,9 @@ p {
   background: #ffffff;
   border-color: #ffffff;
   color: #d6dbdf;
+}
+.rtsdk {
+  /* Success/Danger Buttons */
 }
 .rtsdk .btn-success {
   background: #00875a;
@@ -262,6 +287,9 @@ p {
   border-color: #cc4040;
   color: #cc4040;
 }
+.rtsdk {
+  /* Icon Button */
+}
 .rtsdk .btn-icon {
   width: 40px;
   min-width: 40px;
@@ -278,6 +306,9 @@ p {
 .rtsdk .btn-icon:disabled {
   background: #dee2e5;
   border-color: #ebedef;
+}
+.rtsdk {
+  /*** Inputs ***/
 }
 .rtsdk .label {
   color: #3b5166;
@@ -302,6 +333,10 @@ p {
 .rtsdk .input-error {
   color: #0a2540;
   border-color: #cc4040;
+}
+.rtsdk .input-success {
+  color: #0a2540;
+  border-color: #00a76f;
 }
 .rtsdk .input-group {
   position: relative;
@@ -348,6 +383,10 @@ p {
 .rtsdk .input-radio.input-error {
   outline-color: #cc4040;
 }
+.rtsdk .input-checkbox.input-success,
+.rtsdk .input-radio.input-success {
+  outline-color: #00a76f;
+}
 .rtsdk .input-checkbox:checked {
   background-image: url(https://sdk-style.s3.amazonaws.com/icons/check.svg);
   background-size: contain;
@@ -358,6 +397,11 @@ p {
   background-size: contain;
   outline-color: #cc4040;
 }
+.rtsdk .input-checkbox.input-success:checked {
+  background-image: url(https://sdk-style.s3.amazonaws.com/icons/check.svg);
+  background-size: contain;
+  outline-color: #00a76f;
+}
 .rtsdk .input-radio:checked {
   background: #0a2540;
   outline-color: #0a2540;
@@ -365,6 +409,13 @@ p {
 .rtsdk .input-radio.input-error:checked {
   background: #cc4040;
   outline-color: #cc4040;
+}
+.rtsdk .input-radio.input-success:checked {
+  background: #00a76f;
+  outline-color: #00a76f;
+}
+.rtsdk {
+  /*** Cards ***/
 }
 .rtsdk .card {
   width: 100%;
@@ -440,6 +491,9 @@ p {
 .rtsdk .card.horizontal .card-actions {
   width: auto;
 }
+.rtsdk {
+  /*** Timer ***/
+}
 .rtsdk .timer {
   padding: 8px;
   border-radius: 8px;
@@ -449,6 +503,9 @@ p {
   gap: 8px;
   flex-direction: column;
   align-items: center;
+}
+.rtsdk {
+  /*** Modal ***/
 }
 .rtsdk .modal-container {
   width: 100%;
@@ -495,6 +552,9 @@ p {
   padding-top: 8px;
   gap: 16px;
 }
+.rtsdk {
+  /*** Tabs ***/
+}
 .rtsdk .tab-container {
   display: flex;
   width: 100%;
@@ -513,9 +573,13 @@ p {
 .rtsdk .tab-text-container .btn-text {
   border-bottom: 1px solid #ebedef;
   border-radius: 0;
+  min-width: unset;
 }
 .rtsdk .tab-text-container .btn-text.active {
   border-bottom: 1px solid #0a2540;
+}
+.rtsdk {
+  /*** Chips ***/
 }
 .rtsdk .chip {
   display: inline-flex;
@@ -534,6 +598,9 @@ p {
   color: #c62828;
   border-color: #c62828;
 }
+.rtsdk {
+  /*** Tables ***/
+}
 .rtsdk .table {
   width: 100%;
   padding: 16px;
@@ -546,6 +613,9 @@ p {
 .rtsdk .table td {
   padding: 8px;
   text-align: left;
+}
+.rtsdk {
+  /*** Tooltips ***/
 }
 .rtsdk .tooltip {
   position: relative;
@@ -567,6 +637,9 @@ p {
 }
 .rtsdk .tooltip:hover .tooltip-content {
   visibility: visible;
+}
+.rtsdk {
+  /*** Accordions ***/
 }
 .rtsdk .accordion-container {
   width: 100%;

@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="https://sdk-style.s3.amazonaws.com/styles-3.0.2.css" />
-    <!-- <link rel="stylesheet" href="./styles-3.0.2.css" /> -->
+    <!-- <link rel="stylesheet" href="https://sdk-style.s3.amazonaws.com/styles-3.0.2.css" /> -->
+    <link rel="stylesheet" href="./styles-3.0.2.css" />
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
     <script
@@ -79,6 +79,13 @@
         <p class="p3">This is a paragraph with the .p3 class applied</p>
 
         <p class="p4">This is a paragraph with the .p4 class applied</p>
+
+        <hr />
+
+        <p class="p3 text-muted">text-muted</p>
+        <p class="p3 text-success">text-success</p>
+        <p class="p3 text-warning">text-warning</p>
+        <p class="p3 text-error">text-error</p>
 
         <hr />
 
@@ -306,6 +313,18 @@
 &lt;/label&gt;</code>
 </pre>
         </div>
+        <div style="display: block; margin: 0 0 10px">
+          <label class="label">
+            <input type="radio" class="input-radio input-success" name="radio" />
+            Success
+          </label>
+          <pre>
+<code>&lt;label&gt;
+  &lt;input type="radio" name="radio" class="input-radio input-success" /&gt;
+  Radio Button
+&lt;/label&gt;</code>
+</pre>
+        </div>
         <label class="label">
           <input class="input-radio" type="radio" disabled />
           Disabled
@@ -339,6 +358,18 @@
 <code>&lt;label&gt;
   &lt;input type="checkbox" class="input input-checkbox input-error" /&gt;
   Error
+&lt;/label&gt;</code>
+</pre>
+        </div>
+        <div style="display: block; margin: 0 0 10px">
+          <label class="label">
+            <input type="checkbox" class="input-checkbox input-success" />
+            Success
+          </label>
+          <pre>
+<code>&lt;label&gt;
+  &lt;input type="checkbox" class="input input-checkbox input-success" /&gt;
+  Success
 &lt;/label&gt;</code>
 </pre>
         </div>

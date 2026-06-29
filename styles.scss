@@ -179,6 +179,14 @@ p {
     margin: 0;
   }
 
+  .text-warning {
+    color: $colors-warning-900;
+  }
+
+  .text-danger {
+    color: $colors-danger-500;
+  }
+
   .text-error {
     color: $colors-danger-500;
     font-family: "Open Sans";
@@ -195,6 +203,10 @@ p {
 
   .text-muted {
     color: $colors-primary-500;
+  }
+
+  .text-white {
+    color: $colors-primary-0;
   }
 
   /*** Buttons ***/
@@ -349,6 +361,10 @@ p {
     color: $colors-primary-900;
     border-color: $colors-danger-500;
   }
+  .input-success {
+    color: $colors-primary-900;
+    border-color: $colors-success-500;
+  }
 
   .input-group {
     position: relative;
@@ -397,6 +413,10 @@ p {
   .input-radio.input-error {
     outline-color: $colors-danger-500;
   }
+  .input-checkbox.input-success,
+  .input-radio.input-success {
+    outline-color: $colors-success-500;
+  }
 
   .input-checkbox:checked {
     background-image: url(https://sdk-style.s3.amazonaws.com/icons/check.svg);
@@ -408,6 +428,11 @@ p {
     background-size: contain;
     outline-color: $colors-danger-500;
   }
+  .input-checkbox.input-success:checked {
+    background-image: url(https://sdk-style.s3.amazonaws.com/icons/check.svg);
+    background-size: contain;
+    outline-color: $colors-success-500;
+  }
 
   .input-radio:checked {
     background: $colors-primary-900;
@@ -416,6 +441,10 @@ p {
   .input-radio.input-error:checked {
     background: $colors-danger-500;
     outline-color: $colors-danger-500;
+  }
+  .input-radio.input-success:checked {
+    background: $colors-success-500;
+    outline-color: $colors-success-500;
   }
 
   /*** Cards ***/
@@ -549,7 +578,9 @@ p {
     border-radius: $spacing-2;
     border: 1px solid $colors-primary-100;
     background: $colors-primary-0;
-    box-shadow: 0px 15px 12px 0px rgba(0, 0, 0, 0.11), 0px 19px 38px 0px rgba(0, 0, 0, 0.15);
+    box-shadow:
+      0px 15px 12px 0px rgba(0, 0, 0, 0.11),
+      0px 19px 38px 0px rgba(0, 0, 0, 0.15);
     text-align: center;
   }
 
@@ -588,6 +619,7 @@ p {
   .tab-text-container .btn-text {
     border-bottom: 1px solid $colors-primary-100;
     border-radius: 0;
+    min-width: unset;
   }
   .tab-text-container .btn-text.active {
     border-bottom: 1px solid $colors-primary-900;
